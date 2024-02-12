@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+*{
+margin: 0px;
+}
+    #body{
+        height: 600px;
+         width: 100%;
+          background-image: url(./login\ logo.jpg);
+          background-repeat: no-repeat;
+          background-size: 100% 600px;
+         
+    }
+    #inner{
+        height: 350px; 
+        width: 300px;
+         background-color:darkgrey; 
+         border: 4px groove black;
+    background-image: radial-gradient(rgba(0, 255, 187, 0.155),rgb(0, 109, 128),rgba(136, 255, 0, 0.493));
+    }
+</style>
+
+<body>
+    <div id="body">
+        <br><br><br>
+    <center>
+    <div id="inner">
+        <br>
+        <h1>SIGN UP</h1><br><br>
+    <form action="">
+        <label for="">EMAIL:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="email"  placeholder=" Enter mail id"  id="a" >
+        <br><br>
+        <label for="">PASSWORD:</label>
+        <input type="password" placeholder="Enter password" id="b">
+        <br><br>
+        <label for="">NAME:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" placeholder=" Enter userName" id="c">
+        <br><br>
+        <button style="background-color: rgb(165, 83, 42);">Submit</button>
+    </form>
+        
+    </div></center>
+
+    
+</div>
+    <script>
+        f=document.querySelector("button")
+        f.addEventListener("click",() =>
+        {
+            p=document.getElementById("a").value
+            q=document.getElementById("b").value
+           r=document.getElementById("c").value
+            sessionStorage.setItem("mail",p)
+            sessionStorage.setItem("password",q)
+            sessionStorage.setItem("name",r)   
+        if (p!=""&&q!=""&&r!="") {
+            window.open("index.html")
+        } 
+        else if (p==""||q==""||r=="")
+        {
+            window.alert("Enter all the credentials")
+        }
+        })
+        
+        
+    </script>
+</body>
+</html>

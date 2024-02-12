@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+margin: 0px;
+}
+    #body{
+        height: 600px;
+         width: 100%;
+          background-image: url(./logo.jpeg);
+          background-repeat: no-repeat;
+          background-size: 100% 600px;      
+    }
+    #inner{
+        height: 350px; 
+        width: 300px; 
+        background-color:darkorange;
+        border: 2px solid black; 
+        background-image:conic-gradient(rgba(0, 255, 170, 0.4),black,rgb(0, 119, 128));
+    }
+</style>
+<body>
+    <div id="body">
+        <br><br><br>
+    <center>
+    <div id="inner" >
+        <br>
+        <H1>LOGIN</H1><br><br>
+    <form action="">
+        <label for="" >EMAIL:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text"  placeholder="mail" id="a" >
+        <br><br>
+         <label for="">PASSWORD:</label>
+        <input type="text" placeholder="password" id="b">
+        <br><br>
+        <label for="">NAME:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" placeholder="name" id="c">
+        <br><br><br>
+        <button style="background-color: chocolate;">Submit</button>
+    </div></center>
+    </form>
+    </div>
+    <script>
+        f=document.querySelector("button")
+        f.addEventListener("click",() =>
+        {
+            p=document.getElementById("a").value
+            q=document.getElementById("b").value
+            r=document.getElementById("c").value
+            //session storage from signup
+            x=sessionStorage.getItem("mail")
+            y=sessionStorage.getItem("password")
+            z=sessionStorage.getItem("name")
+            if (p==x&&q==y&&r==z) {
+                window.open("https://www.instagram.com/?hl=en")
+                
+            } 
+            else if (p==""||q==""||r=="")
+            {
+                window.alert("Entered details are correct")
+            }
+            else if (p!=x||q!=y||r!=z) 
+            {
+                window.alert("Entered details are not matched")
+                
+            }
+            
+        })
+        </script>
+
+</body>
+</html>
